@@ -10,6 +10,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  output: 'export',
   reactStrictMode: true,
   swcMinify: true,
   transpilePackages: externals,
