@@ -14,7 +14,7 @@
     "ts": "tsc --noemit --project ./tsconfig.json"
   },
   "dependencies": {
-    "@blockle/blocks-v2": "^0.0.29",
+    "@blockle/blocks-v2": "^0.0.30",
     "@saartje87/md-ast": "^0.4.4",
     "next": "^13.3.0",
     "react": "^18.2.0",

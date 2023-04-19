@@ -216,10 +216,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@blockle/blocks-v2@^0.0.29":
-  version "0.0.29"
-  resolved "https://registry.yarnpkg.com/@blockle/blocks-v2/-/blocks-v2-0.0.29.tgz#6bd41af1b57a91796688bbcaef971a521189d3f3"
-  integrity sha512-1l2xjMCt8Wb/Z4q3vzKf1bXg3hcMPPuN+pCULPmxLrLnzBlOV/kc5DVIY+gCVN3T/lmH40C518BiH1FtPNdMbw==
+"@blockle/blocks-v2@^0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@blockle/blocks-v2/-/blocks-v2-0.0.30.tgz#d3d2dfc7eb617d983986492e0eef414cad416810"
+  integrity sha512-0DSy+CCEEw46QWiwAeqAAI7HbCL5Kf8do47a09yqsHsXSRvSYasIZsCgQjppHWg9TKDZoXGjT6WJIWjYxAwamw==
   dependencies:
     react "^18"
     react-dom "^18"
