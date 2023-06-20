@@ -1,7 +1,6 @@
 import { BlocksProvider, Box } from '@blockle/blocks';
 import '@blockle/blocks/reset.css';
 import { theme } from '@blockle/blocks/themes/momotaro';
-import Link from 'next/link';
 import { Header } from '../components/Header/Header';
 import { Navigation } from '../components/Navigation/Navigation';
 
@@ -21,7 +20,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <BlocksProvider theme={theme} spriteUrl="/icons.svg" linkComponent={Link}>
+        {/* TODO add spriteUrl="/icons.svg" and linkComponent={Link} */}
+        <BlocksProvider theme={theme}>
           <Header />
 
           <Navigation />
