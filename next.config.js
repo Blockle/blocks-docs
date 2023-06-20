@@ -1,19 +1,15 @@
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 
-const externals = [];
-const withVanillaExtract = createVanillaExtractPlugin({
-  externals,
-});
+const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     appDir: true,
   },
-  output: 'export',
+  // output: 'export',
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: externals,
   images: { unoptimized: true },
 };
 
