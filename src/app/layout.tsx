@@ -1,7 +1,9 @@
-import { BlocksProvider } from '@blockle/blocks-v2';
-import '@blockle/blocks-v2/src/reset.css';
-import { theme } from '@blockle/blocks-v2/src/Themes/Momotaro';
+import { BlocksProvider, Box } from '@blockle/blocks';
+import '@blockle/blocks/reset.css';
+import { theme } from '@blockle/blocks/themes/momotaro';
 import Link from 'next/link';
+import { Header } from '../components/Header/Header';
+import { Navigation } from '../components/Navigation/Navigation';
 
 export const metadata = {
   title: '@blockle/blocks react design system',
@@ -11,9 +13,20 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <BlocksProvider theme={theme} spriteUrl="/icons.svg" linkComponent={Link}>
-          {children}
+          <Header />
+
+          <Navigation />
+
+          <Box padding="gutter">{children}</Box>
         </BlocksProvider>
       </body>
     </html>

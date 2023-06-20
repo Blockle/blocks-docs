@@ -1,6 +1,6 @@
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 
-const externals = ['@blockle/blocks-v2', 'outdent'];
+const externals = [];
 const withVanillaExtract = createVanillaExtractPlugin({
   externals,
 });
@@ -14,6 +14,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   transpilePackages: externals,
+  images: { unoptimized: true },
 };
 
 module.exports = withVanillaExtract(nextConfig);

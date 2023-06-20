@@ -1,11 +1,12 @@
-import { Box } from '@blockle/blocks-v2';
+import { Box } from '@blockle/blocks';
 import type { NextPage } from 'next';
-import { Navigation } from '../components/Navigation/Navigation';
 
 const Home: NextPage = () => {
   return (
     <Box>
-      <Navigation />
+      {/* <Heading level={1}>Homepage</Heading> */}
+
+      <div style={{ height: 1000 }}>KEKE</div>
     </Box>
   );
 };
