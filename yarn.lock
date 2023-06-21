@@ -535,6 +535,18 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@md-parser/parser@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@md-parser/parser/-/parser-0.11.0.tgz#37722e1e9ffe88851707c04cb0f776b4d26b4395"
+  integrity sha512-g6HzxADJH4x1991NjA4rQXFvuYiXQE0+QeIWwffADMhFEz4mC4tu+LyC6KN6LFSqxFui7tuSWvO6xuQSrYWsBQ==
+
+"@md-parser/react@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@md-parser/react/-/react-1.0.2.tgz#f095e617017e096847a1d6a17210a8de38803977"
+  integrity sha512-SfyEsMc0bW3xu4w7AvZkH/XSdp1nycFvLX+SXLe9lR5D2vYOUGvwOtqkbGQFHStHQXjOt/k0oI0ymfJ5BQiM8w==
+  dependencies:
+    "@md-parser/parser" "^0.11.0"
+
 "@next/env@13.4.6":
   version "13.4.6"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.4.6.tgz#3f2041c7758660d7255707ae4cb9166519113dea"

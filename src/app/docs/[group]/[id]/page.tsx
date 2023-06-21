@@ -1,39 +1,36 @@
 import { Box } from '@blockle/blocks';
+import { readFile } from 'fs/promises';
 import type { NextPage } from 'next';
+import { Markdown } from '../../../../components/Markdown/Markdown';
+import { validParams } from '../../../../utils/readMarkdown';
 
 type Params = {
   group: string;
   id: string;
 };
 
-const Page: NextPage<{ params: Params }> = ({ params: { group, id } }) => {
+const Page: NextPage<{ params: Params }> = async ({ params: { group, id } }) => {
+  if (!validParams(group, id)) {
+    return (
+      <Box>
+        <pre>Invalid params</pre>
+      </Box>
+    );
+  }
+
+  let contents = '404';
+
+  try {
+    contents = await readFile(`src/docs/${group}/${id}.md`, 'utf8');
+  } catch (e) {
+    console.log(e);
+  }
+
   return (
     <Box>
-      {/* <Heading level={1}>Homepage</Heading> */}
-
-      <div style={{ height: 1000 }}>
-        {group} - {id}
-      </div>
+      <Markdown>{contents}</Markdown>
     </Box>
   );
 };
-
-// export async function generateStaticParams() {
-//   const groups = [
-//     'theme',
-//     'layout',
-//     'forms',
-//     'typography',
-//     'icons',
-//     'utilities',
-//     'hooks',
-//     'components',
-//   ];
-//   const ids = ['getting-started', 'usage', 'customization', 'contributing'];
-
-//   return posts.map((post) => ({
-//     slug: post.slug,
-//   }));
-// }
 
 export default Page;
