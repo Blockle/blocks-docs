@@ -6,8 +6,9 @@ import { Header } from '../components/Header/Header';
 import { Navigation } from '../components/Navigation/Navigation';
 
 export const metadata = {
-  title: '@blockle/blocks react design system',
-  description: '@blockle/blocks design system for React written in TypeScript and vanilla-extract',
+  title: '@blockle/blocks - React design system',
+  description:
+    '@blockle/blocks - Design system for React written in TypeScript and vanilla-extract',
 };
 
 const rubik = Rubik({
