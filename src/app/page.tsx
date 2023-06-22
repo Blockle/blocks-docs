@@ -6,7 +6,28 @@ const Home: NextPage = () => {
     <Box>
       {/* <Heading level={1}>Homepage</Heading> */}
 
-      <div style={{ height: 1000 }}>KEKE</div>
+      <menu>
+        <ul>
+          <li>
+            <a href="/docs">Get started (404)</a>
+          </li>
+          <li>
+            <a href="/docs/theme/theming">Theming</a>
+          </li>
+          <li>Layout</li>
+          <ul>
+            <li>
+              <a href="/docs/layout/box">Box</a>
+            </li>
+            <li>
+              <a href="/docs/layout/stack">Stack</a>
+            </li>
+            <li>
+              <a href="/docs/layout/inline">Inline</a>
+            </li>
+          </ul>
+        </ul>
+      </menu>
     </Box>
   );
 };

@@ -28,11 +28,7 @@ const Page: NextPage<{ params: Params }> = async ({ params: { group, id } }) => 
     console.log(e);
   }
 
-  return (
-    <Box>
-      <Markdown>{contents}</Markdown>
-    </Box>
-  );
+  return <Markdown>{contents}</Markdown>;
 };
 
 export default Page;
