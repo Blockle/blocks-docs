@@ -1,6 +1,7 @@
 import { Box } from '@blockle/blocks';
 import { readFile } from 'fs/promises';
 import type { NextPage } from 'next';
+import path from 'path';
 import { Markdown } from '../../../../components/Markdown/Markdown';
 import { validParams } from '../../../../utils/readMarkdown';
 
@@ -21,7 +22,8 @@ const Page: NextPage<{ params: Params }> = async ({ params: { group, id } }) => 
   let contents = '404';
 
   try {
-    contents = await readFile(`./src/docs/${group}/${id}.md`, 'utf8');
+    const srcPath = path.join(process.cwd(), 'src');
+    contents = await readFile(`${srcPath}/docs/${group}/${id}.md`, 'utf8');
   } catch (e) {
     console.log(e);
   }
