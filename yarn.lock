@@ -210,10 +210,10 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@blockle/blocks@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@blockle/blocks/-/blocks-0.2.1.tgz#32ef37fcd50ac8a70dbdb3d6e4247aba4cb45150"
-  integrity sha512-VdboIfxODfFotqeQRQJQhAxzA4NlOeN5qLD9Xaq84dLX2nYxHcYo2c51RYr/BF0FvSmwseQl+SSvl71eQ98nkg==
+"@blockle/blocks@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@blockle/blocks/-/blocks-0.2.2.tgz#fcda3dc7fb40284036bc32c329f90cba59599c4a"
+  integrity sha512-9j6fS73jxBYd8VxZGNS2ZvAjC19QXU59eNI0i82GxuJRezyGuF/bwwQARpot3GNAM8UWegOCRiHUvnydex2oPw==
   dependencies:
     "@radix-ui/react-polymorphic" "^0.0.14"
     "@vanilla-extract/css" "^1.11.1"
