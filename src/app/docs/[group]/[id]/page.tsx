@@ -21,7 +21,7 @@ const Page: NextPage<{ params: Params }> = async ({ params: { group, id } }) => 
   let contents = '404';
 
   try {
-    contents = await readFile(`src/docs/${group}/${id}.md`, 'utf8');
+    contents = await readFile(`./src/docs/${group}/${id}.md`, 'utf8');
   } catch (e) {
     console.log(e);
   }
