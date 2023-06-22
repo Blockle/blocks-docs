@@ -25,7 +25,7 @@ const Page: NextPage<{ params: Params }> = async ({ params: { group, id } }) => 
     const srcPath = path.join(process.cwd(), 'src');
     contents = await readFile(`${srcPath}/docs/${group}/${id}.md`, 'utf8');
   } catch (e) {
-    console.log(e);
+    console.log('Failed to read file', e);
   }
 
   return <Markdown>{contents}</Markdown>;

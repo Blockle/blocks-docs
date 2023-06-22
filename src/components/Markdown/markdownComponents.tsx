@@ -1,5 +1,6 @@
 import { Box, Heading, Stack, Text } from '@blockle/blocks';
 import { MarkdownComponents } from '@md-parser/react';
+import { SyntaxHighlighter } from '../SyntaxHighlighter/SyntaxHighlighter';
 
 const HeadingRenderer: MarkdownComponents['heading'] = ({ children, level }) => (
   <Heading level={level}>{children}</Heading>
@@ -45,7 +46,9 @@ const SuperscriptRenderer: MarkdownComponents['superscript'] = ({ children }) =>
   <sup>{children}</sup>
 );
 
-const CodeRenderer: MarkdownComponents['code'] = ({ value }) => <pre>{value}</pre>;
+const CodeRenderer: MarkdownComponents['code'] = ({ value, language }) => (
+  <SyntaxHighlighter language={language || 'ts'}>{value}</SyntaxHighlighter>
+);
 
 const InlineCodeRenderer: MarkdownComponents['inlineCode'] = ({ value }) => <code>{value}</code>;
 
