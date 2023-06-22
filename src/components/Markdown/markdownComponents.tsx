@@ -1,14 +1,12 @@
-import { Box } from '@blockle/blocks';
+import { Box, Heading, Stack, Text } from '@blockle/blocks';
 import { MarkdownComponents } from '@md-parser/react';
 
 const HeadingRenderer: MarkdownComponents['heading'] = ({ children, level }) => (
-  <Box as={`h${level}`} data-level={level}>
-    {children}
-  </Box>
+  <Heading level={level}>{children}</Heading>
 );
 
 const ParagraphRenderer: MarkdownComponents['paragraph'] = ({ children }) => (
-  <Box as="p">{children}</Box>
+  <Text as="p">{children}</Text>
 );
 
 const BlockquoteRenderer: MarkdownComponents['blockquote'] = ({ children }) => (
@@ -22,9 +20,9 @@ const LinkRenderer: MarkdownComponents['link'] = ({ children, href, title }) => 
 );
 
 const ListRenderer: MarkdownComponents['list'] = ({ children, ordered, start }) => (
-  <Box as={ordered ? 'ol' : 'ul'} start={start} style={{ margin: 0 }}>
+  <Stack as={ordered ? 'ol' : 'ul'} start={start} gap="small">
     {children}
-  </Box>
+  </Stack>
 );
 
 const ListItemRenderer: MarkdownComponents['listItem'] = ({ children }) => <li>{children}</li>;
