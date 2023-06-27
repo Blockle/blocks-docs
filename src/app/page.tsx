@@ -1,5 +1,6 @@
 import { Box } from '@blockle/blocks';
 import type { NextPage } from 'next';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -9,21 +10,21 @@ const Home: NextPage = () => {
       <menu>
         <ul>
           <li>
-            <a href="/docs">Get started (404)</a>
+            <Link href="/docs">Get started (404)</Link>
           </li>
           <li>
-            <a href="/docs/theme/theming">Theming</a>
+            <Link href="/docs/theme/theming">Theming</Link>
           </li>
           <li>Layout</li>
           <ul>
             <li>
-              <a href="/docs/layout/box">Box</a>
+              <Link href="/docs/layout/box">Box</Link>
             </li>
             <li>
-              <a href="/docs/layout/stack">Stack</a>
+              <Link href="/docs/layout/stack">Stack</Link>
             </li>
             <li>
-              <a href="/docs/layout/inline">Inline</a>
+              <Link href="/docs/layout/inline">Inline</Link>
             </li>
           </ul>
         </ul>
