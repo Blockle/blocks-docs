@@ -6,6 +6,8 @@ Theming in Blocks is split into two parts: tokens and component styles.
 
 ## Tokens
 
+Tokens are the building blocks of your theme. They are used to define the values of your theme, such as colors, spacing, and typography. Tokens are passed to the `makeTheme` function to create a theme.
+
 ```ts
 import { BlocksTokens } from '@blockle/blocks';
 
@@ -88,6 +90,35 @@ export const tokens: BlocksTokens = {
 
 ## Component styles
 
+Component styles are used to define the styles of components in your theme. They are passed to the `makeTheme` function to create a theme.
+
+Every component can be styled using the `componentStyles` object. The key of the object is the name of the component, and the value is a function that returns the styles for that component.
+
+In this example we are styling the `Button` component. The `base` object contains the base styles for the component. The `variants` object contains styles for different variants of the component. The `compoundVariants` object contains styles for combinations of variants. The `defaultVariants` object contains the default variants for the component.
+
+Note that when styling a component, you have to work with the variants that are defined in the component. For example, if the `Button` component has a `size` variant, you can't use the `size` variant.
+
+```ts
+export const button = makeComponentTheme({
+  // Name of the component
+  type: 'button',
+  // Base styles for the component
+  base: {
+    // ...
+  },
+  // Styles for different variants of the component
+  variants: {
+    // ...
+  },
+  compoundVariants: {
+    // ...
+  },
+  defaultVariants: {
+    // ...
+  },
+});
+```
+
 ## Putting it all together
 
 _`myTheme.css.ts`_
@@ -95,15 +126,16 @@ _`myTheme.css.ts`_
 ```tsx
 import { makeTheme } from '@blockle/blocks';
 import { tokens } from './tokens';
-// Add component styles here
+import { components } from './components';
 
 export const theme = makeTheme({
   name: 'myTheme',
   tokens,
+  components,
 });
 ```
 
-## Using an existing theme
+## Using a theme with react context
 
 ```tsx
 import { theme } from '@blockle/blocks/themes/momotaro';
@@ -116,4 +148,17 @@ const App = () => (
 );
 ```
 
-## Extending a theme
+## Using with SSR
+
+To use `@blockle/blocks` with Server Side Rendering, you need to use `setGlobalTheme` function. This will set the theme globally, so you don't need to use `ThemeProvider` in your app.
+
+```ts
+import { setGlobalTheme } from '@blockle/blocks';
+import { theme } from '@blockle/blocks/themes/momotaro';
+
+setGlobalTheme(theme);
+```
+
+Note `setGlobalTheme` and `BlocksProvider` can be used together. You probably won't need to use both.
+
+## Extending a theme ??
