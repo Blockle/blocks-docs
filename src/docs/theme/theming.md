@@ -8,7 +8,7 @@ Theming in Blocks is split into two parts: tokens and component styles.
 
 Tokens are the building blocks of your theme. They are used to define the values of your theme, such as colors, spacing, and typography. Tokens are passed to the `makeTheme` function to create a theme.
 
-```ts
+```typescript
 import { BlocksTokens } from '@blockle/blocks';
 
 export const tokens: BlocksTokens = {
@@ -98,7 +98,9 @@ In this example we are styling the `Button` component. The `base` object contain
 
 Note that when styling a component, you have to work with the variants that are defined in the component. For example, if the `Button` component has a `size` variant, you can't use the `size` variant.
 
-```ts
+_`components/button.ts`_
+
+```typescript
 export const button = makeComponentTheme({
   // Name of the component
   type: 'button',
@@ -119,46 +121,44 @@ export const button = makeComponentTheme({
 });
 ```
 
+Then combine all the component styles into one object.
+
+_`components/index.ts`_
+
+```typescript
+import { button } from './button.css';
+
+export const components = {
+  button,
+  // ...
+} as const;
+```
+
 ## Putting it all together
 
 _`myTheme.css.ts`_
 
-```tsx
+```typescript
 import { makeTheme } from '@blockle/blocks';
 import { tokens } from './tokens';
 import { components } from './components';
 
-export const theme = makeTheme({
+export const myTheme = makeTheme({
   name: 'myTheme',
   tokens,
   components,
 });
 ```
 
-## Using a theme with react context
+## Registering your theme
 
-```tsx
-import { theme } from '@blockle/blocks/themes/momotaro';
-import { BlocksProvider, Button } from '@blockle/blocks';
-
-const App = () => (
-  <ThemeProvider theme={theme}>
-    <Button>Click me</Button>
-  </ThemeProvider>
-);
-```
-
-## Using with SSR
-
-To use `@blockle/blocks` with Server Side Rendering, you need to use `setGlobalTheme` function. This will set the theme globally, so you don't need to use `ThemeProvider` in your app.
+In the best scenario we would use React context to pass the theme to the components. However, since Server Side Rendering is supported, we need to use a global variable to pass the theme to the components. (Context does not work on the server side.)
 
 ```ts
-import { setGlobalTheme } from '@blockle/blocks';
-import { theme } from '@blockle/blocks/themes/momotaro';
+import { setTheme } from '@blockle/blocks';
+import { myTheme } from './myTheme.css';
 
-setGlobalTheme(theme);
+setTheme(myTheme);
 ```
-
-Note `setGlobalTheme` and `BlocksProvider` can be used together. You probably won't need to use both.
 
 ## Extending a theme ??
