@@ -1,5 +1,4 @@
 import { Box } from '@blockle/blocks';
-import '@blockle/blocks/reset.css';
 import { Rubik } from 'next/font/google';
 import Link from 'next/link';
 
