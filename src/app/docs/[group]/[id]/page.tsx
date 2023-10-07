@@ -28,7 +28,11 @@ const Page: NextPage<{ params: Params }> = async ({ params: { group, id } }) => 
     console.log('Failed to read file', e);
   }
 
-  return <Markdown>{contents}</Markdown>;
+  return (
+    <>
+      <Markdown>{contents}</Markdown>
+    </>
+  );
 };
 
 export default Page;

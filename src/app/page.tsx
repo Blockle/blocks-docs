@@ -5,8 +5,6 @@ import Link from 'next/link';
 const Home: NextPage = () => {
   return (
     <Box>
-      {/* <Heading level={1}>Homepage</Heading> */}
-
       <menu>
         <ul>
           <li>
@@ -25,6 +23,12 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Link href="/docs/layout/inline">Inline</Link>
+            </li>
+          </ul>
+          <li>Components</li>
+          <ul>
+            <li>
+              <Link href="/docs/components/button">Button</Link>
             </li>
           </ul>
         </ul>

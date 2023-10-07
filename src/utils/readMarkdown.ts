@@ -1,5 +1,5 @@
-const groups = ['layout', 'theme'];
-const ids = ['theming', 'box', 'stack', 'inline'];
+const groups = ['layout', 'theme', 'components'];
+const ids = ['theming', 'box', 'stack', 'inline', 'button'];
 
 export function validParams(group: string, id: string): boolean {
   if (!groups.includes(group)) {
