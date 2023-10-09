@@ -30,6 +30,9 @@ const Home: NextPage = () => {
             <li>
               <Link href="/docs/components/button">Button</Link>
             </li>
+            <li>
+              <Link href="/docs/components/link">Link</Link>
+            </li>
           </ul>
         </ul>
       </menu>

@@ -101,9 +101,7 @@ Note that when styling a component, you have to work with the variants that are 
 _`components/button.ts`_
 
 ```typescript
-export const button = makeComponentTheme({
-  // Name of the component
-  type: 'button',
+export const button = makeComponentTheme('button', {
   // Base styles for the component
   base: {
     // ...
@@ -149,16 +147,3 @@ export const myTheme = makeTheme({
   components,
 });
 ```
-
-## Registering your theme
-
-In the best scenario we would use React context to pass the theme to the components. However, since Server Side Rendering is supported, we need to use a global variable to pass the theme to the components. (Context does not work on the server side.)
-
-```ts
-import { setTheme } from '@blockle/blocks';
-import { myTheme } from './myTheme.css';
-
-setTheme(myTheme);
-```
-
-## Extending a theme ??

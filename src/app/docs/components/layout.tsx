@@ -1,5 +1,4 @@
 import { Box } from '@blockle/blocks';
-import { Rubik } from 'next/font/google';
 import Link from 'next/link';
 
 export const metadata = {
@@ -7,13 +6,6 @@ export const metadata = {
   description:
     '@blockle/blocks - Design system for React written in TypeScript and vanilla-extract',
 };
-
-const rubik = Rubik({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
