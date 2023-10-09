@@ -1,43 +1,31 @@
-import { Box } from '@blockle/blocks';
+import { Box, Heading, Stack, Text } from '@blockle/blocks';
 import type { NextPage } from 'next';
-import Link from 'next/link';
+import { Link } from '../components/Link/Link';
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
-    <Box>
-      <menu>
-        <ul>
-          <li>
-            <Link href="/docs">Get started (404)</Link>
-          </li>
-          <li>
-            <Link href="/docs/theme/theming">Theming</Link>
-          </li>
-          <li>Layout</li>
-          <ul>
-            <li>
-              <Link href="/docs/layout/box">Box</Link>
-            </li>
-            <li>
-              <Link href="/docs/layout/stack">Stack</Link>
-            </li>
-            <li>
-              <Link href="/docs/layout/inline">Inline</Link>
-            </li>
-          </ul>
-          <li>Components</li>
-          <ul>
-            <li>
-              <Link href="/docs/components/button">Button</Link>
-            </li>
-            <li>
-              <Link href="/docs/components/link">Link</Link>
-            </li>
-          </ul>
-        </ul>
-      </menu>
+    <Box padding="gutter">
+      <Stack gap="large" alignX="center">
+        <Heading level={1}>
+          Build acccesible React apps with{' '}
+          <Text fontWeight="strong" color="secondary">
+            @blockle/blocks
+          </Text>
+        </Heading>
+
+        <Text as="p">
+          <Text as="strong" fontWeight="strong">
+            @blockle/blocks
+          </Text>{' '}
+          is a design system for React written in TypeScript and vanilla-extract.
+        </Text>
+
+        <Stack gap="small" alignX="center">
+          <Link href="/docs">Get started</Link>
+        </Stack>
+      </Stack>
     </Box>
   );
 };
 
-export default Home;
+export default HomePage;

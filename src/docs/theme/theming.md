@@ -9,7 +9,7 @@ Theming in Blocks is split into two parts: tokens and component styles.
 Tokens are the building blocks of your theme. They are used to define the values of your theme, such as colors, spacing, and typography. Tokens are passed to the `makeTheme` function to create a theme.
 
 ```typescript
-import { BlocksTokens } from '@blockle/blocks';
+import { BlocksTokens } from 'lib/css/theme/tokenType';
 
 export const tokens: BlocksTokens = {
   border: {
@@ -38,7 +38,7 @@ export const tokens: BlocksTokens = {
     text: '#2D3142',
     textLight: '#9C9EB9',
     textDark: '#4C5980',
-    caution: '#FF9B90',
+    danger: '#FF9B90',
     link: '#7265E3',
   },
   shadow: {
@@ -46,7 +46,10 @@ export const tokens: BlocksTokens = {
     medium: '0px 8px 16px rgba(0, 0, 0, 0.08)',
     large: '0px 16px 24px rgba(0, 0, 0, 0.08)',
   },
-  space: {
+  focus: {
+    boxShadow: '0 0 4px 2px #AF8EFF',
+  },
+  spacing: {
     none: '0px',
     gutter: '28px',
     xsmall: '4px',
@@ -62,7 +65,7 @@ export const tokens: BlocksTokens = {
   },
   typography: {
     fontFamily: {
-      standard: '"Rubik", sans-serif',
+      primary: '"Rubik", sans-serif',
       secondary: '"Rubik", sans-serif',
     },
     fontSize: {

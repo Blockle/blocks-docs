@@ -4,14 +4,15 @@ import { MarkdownRenderer } from '@md-parser/react';
 import { components } from './markdownComponents';
 
 export type MarkdownProps = {
-  children: string;
+  children?: string;
+  markdown?: string;
 };
 
-export const Markdown: React.FC<MarkdownProps> = ({ children }) => {
+export const Markdown: React.FC<MarkdownProps> = ({ children, markdown }) => {
   return (
     <Stack gap="medium">
       <MarkdownRenderer presets={GFM()} components={components}>
-        {children}
+        {children || markdown || ''}
       </MarkdownRenderer>
     </Stack>
   );
