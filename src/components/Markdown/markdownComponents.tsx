@@ -29,6 +29,7 @@ const ListRenderer: MarkdownComponents['list'] = ({ children, ordered, start }) 
 const ListItemRenderer: MarkdownComponents['listItem'] = ({ children }) => <li>{children}</li>;
 
 const ImageRenderer: MarkdownComponents['image'] = ({ alt, src, title }) => (
+  // eslint-disable-next-line @next/next/no-img-element
   <img loading="lazy" src={src} alt={alt} title={title} width={700} height={500} />
 );
 
