@@ -1,9 +1,12 @@
-import { BlocksProvider, Box } from '@blockle/blocks';
-import '@blockle/blocks/reset.css';
+import { BlocksProvider } from '@blockle/blocks';
 import { momotaro } from '@blockle/blocks/themes/momotaro';
 import { Rubik } from 'next/font/google';
 import { Header } from '../components/Header/Header';
 import { Navigation } from '../components/Navigation/Navigation';
+
+// TODO Why is '@blockle/blocks/reset.css' not working?
+// import '@blockle/blocks/reset.css';
+import '../css/reset.css';
 
 export const metadata = {
   title: '@blockle/blocks - React design system',
@@ -28,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <Navigation />
 
-          <Box padding="gutter">{children}</Box>
+          {children}
         </BlocksProvider>
       </body>
     </html>
