@@ -8,5 +8,7 @@ export async function readMarkdownFile(filename: string): Promise<string> {
     return await readFile(`${srcPath}/docs/${filename}.md`, 'utf8');
   } catch (e) {
     console.log('Failed to read file', e);
+
+    return '';
   }
 }
