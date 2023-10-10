@@ -1,7 +1,7 @@
 ```typescript
-import { BlocksTokens } from '@blockle/blocks';
+import { ThemeTokens } from '@blockle/blocks';
 
-export const tokens: BlocksTokens = {
+export const tokens: ThemeTokens = {
   border: {
     radius: {
       small: '4px',

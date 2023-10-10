@@ -244,10 +244,10 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@blockle/blocks@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@blockle/blocks/-/blocks-0.5.1.tgz#4c96c3e9a02b73844f3a47634002b1fa2e9901d0"
-  integrity sha512-a0OIvRLW+Mmt43ePnOPx3+ypUpxjXkEGnrYpk8sk9ajzXH7eXbTwf3Wlb5CUzzwXITomtdX4mgnUVvPjPo8+ZA==
+"@blockle/blocks@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@blockle/blocks/-/blocks-0.6.0.tgz#ae73c2e2f37aaa69a4bd1b26ac6d2e4443f936b0"
+  integrity sha512-TZHD8DRL5hPga+1p3WLclvmN8psckjp7Nunhfq/zU5/8CWYFDihjxys5Qz7ghV/+RtSQZqGhG5apNKYN9jwzOg==
   dependencies:
     "@changesets/cli" "^2.26.2"
     "@radix-ui/react-polymorphic" "^0.0.14"

@@ -48,6 +48,12 @@ export const SideNav: FC = () => {
           <Divider color="textLight" />
           <Link href="/docs/layout/input">Input</Link>
         </Stack>
+
+        <Stack gap="small">
+          <Text color="textLight">Notifications</Text>
+          <Divider color="textLight" />
+          <Link href="/docs/components/toast">Toast</Link>
+        </Stack>
       </Stack>
     </Box>
   );

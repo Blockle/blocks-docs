@@ -1,6 +1,7 @@
-import { Box, Button, Heading, Stack, Text } from '@blockle/blocks';
+import { Box, Heading, Stack, Text } from '@blockle/blocks';
 import type { NextPage } from 'next';
 import { readMarkdownFile } from '../../../../api/readFile';
+import { ExampleDialog } from '../../../../components/Examples/ExampleDialog/ExampleDialog';
 import { Link } from '../../../../components/Link/Link';
 import { Markdown } from '../../../../components/Markdown/Markdown';
 
@@ -10,7 +11,7 @@ const Page: NextPage = async () => {
   return (
     <Stack gap="xlarge">
       <Stack gap="small">
-        <Heading level={1}>Button</Heading>
+        <Heading level={1}>Dialog</Heading>
 
         <Text as="p">
           Tokens are the building blocks of Blockle design system. They are used to define the
@@ -23,9 +24,7 @@ const Page: NextPage = async () => {
 
         <Markdown>{tokens}</Markdown>
 
-        <Box padding="small">
-          <Button variant="solid">Button text</Button>
-        </Box>
+        <ExampleDialog />
       </Stack>
 
       <Box display="flex" justifyContent="center">

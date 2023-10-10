@@ -2,7 +2,7 @@ import { Link } from '@blockle/blocks';
 import type { NextPage } from 'next';
 import { Markdown } from '../../../../components/Markdown/Markdown';
 
-const Page: NextPage = async () => {
+const LinkPage: NextPage = async () => {
   return (
     <>
       <Markdown>
@@ -28,4 +28,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default LinkPage;

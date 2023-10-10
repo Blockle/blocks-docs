@@ -5,26 +5,29 @@ import { Link } from '../../../../components/Link/Link';
 import { Markdown } from '../../../../components/Markdown/Markdown';
 
 const Page: NextPage = async () => {
-  const tokens = await readMarkdownFile('components/button/button-example');
+  const tokens = await readMarkdownFile('components/toast/toast-example');
 
   return (
     <Stack gap="xlarge">
       <Stack gap="small">
-        <Heading level={1}>Button</Heading>
+        <Heading level={1}>Toast</Heading>
 
         <Text as="p">
           Tokens are the building blocks of Blockle design system. They are used to define the
           visual style of components and are the foundation of the theming system.
         </Text>
+
+        <Markdown>{tokens}</Markdown>
       </Stack>
 
       <Stack gap="small">
         <Heading level={2}>Example</Heading>
 
-        <Markdown>{tokens}</Markdown>
-
-        <Box padding="small">
-          <Button variant="solid">Button text</Button>
+        <Box display="flex" justifyContent="center" gap="medium">
+          <Button variant="solid">Show toast</Button>
+          <Button variant="solid" intent="danger">
+            Show toast
+          </Button>
         </Box>
       </Stack>
 
