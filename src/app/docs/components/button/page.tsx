@@ -12,7 +12,7 @@ const Page: NextPage = async () => {
       <Stack gap="small">
         <Heading level={1}>Button</Heading>
 
-        <Text as="p">
+        <Text tag="p">
           Tokens are the building blocks of Blockle design system. They are used to define the
           visual style of components and are the foundation of the theming system.
         </Text>

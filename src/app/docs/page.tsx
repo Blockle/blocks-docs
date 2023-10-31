@@ -5,7 +5,7 @@ import { CopyCodeBlock } from '../../components/CopyCodeBlock/CopyCodeBlock';
 const GetStartedPage: NextPage = () => {
   return (
     <>
-      <Stack as="section" gap="medium">
+      <Stack tag="section" gap="medium">
         <Heading level={1}>Get started</Heading>
         <Heading level={2}>Install</Heading>
         <Heading level={3}>NPM</Heading>

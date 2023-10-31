@@ -16,7 +16,7 @@ export const ExampleDialog: FC = () => {
           <Stack gap="xsmall">
             <Heading level={1}>Dialog</Heading>
 
-            <Text as="p">
+            <Text tag="p">
               Dialog is a component that is used to display content on top of the current page.
             </Text>
           </Stack>

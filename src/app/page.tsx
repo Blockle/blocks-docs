@@ -13,8 +13,8 @@ const HomePage: NextPage = () => {
           </Text>
         </Heading>
 
-        <Text as="p">
-          <Text as="strong" fontWeight="strong">
+        <Text tag="p">
+          <Text tag="strong" fontWeight="strong">
             @blockle/blocks
           </Text>{' '}
           is a design system for React written in TypeScript and vanilla-extract.

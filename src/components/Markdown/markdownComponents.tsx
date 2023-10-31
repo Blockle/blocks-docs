@@ -1,4 +1,4 @@
-import { Box, Heading, Stack, Text } from '@blockle/blocks';
+import { Box, Heading, Link, Stack, Text } from '@blockle/blocks';
 import { MarkdownComponents } from '@md-parser/react';
 import { SyntaxHighlighter } from '../SyntaxHighlighter/SyntaxHighlighter';
 
@@ -7,21 +7,21 @@ const HeadingRenderer: MarkdownComponents['heading'] = ({ children, level }) => 
 );
 
 const ParagraphRenderer: MarkdownComponents['paragraph'] = ({ children }) => (
-  <Text as="p">{children}</Text>
+  <Text tag="p">{children}</Text>
 );
 
 const BlockquoteRenderer: MarkdownComponents['blockquote'] = ({ children }) => (
-  <Box as="blockquote">{children}</Box>
+  <blockquote>{children}</blockquote>
 );
 
 const LinkRenderer: MarkdownComponents['link'] = ({ children, href, title }) => (
-  <Box as="a" href={href} title={title}>
+  <Link href={href} title={title}>
     {children}
-  </Box>
+  </Link>
 );
 
 const ListRenderer: MarkdownComponents['list'] = ({ children, ordered, start }) => (
-  <Stack as={ordered ? 'ol' : 'ul'} start={start} gap="small">
+  <Stack tag={ordered ? 'ol' : 'ul'} start={start} gap="small">
     {children}
   </Stack>
 );
@@ -63,14 +63,14 @@ const TableRenderer: MarkdownComponents['table'] = ({ header, rows }) => (
 const TableRowRenderer: MarkdownComponents['tableRow'] = ({ children }) => <tr>{children}</tr>;
 
 const TableHeaderRenderer: MarkdownComponents['tableHeader'] = ({ children, align }) => (
-  <Box as="th" style={{ textAlign: align }}>
-    {children}
+  <Box asChild style={{ textAlign: align }}>
+    <th>{children}</th>
   </Box>
 );
 
 const TableDataRenderer: MarkdownComponents['tableData'] = ({ children, align }) => (
-  <Box as="td" style={{ textAlign: align }}>
-    {children}
+  <Box asChild style={{ textAlign: align }}>
+    <td>{children}</td>
   </Box>
 );
 

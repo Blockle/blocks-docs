@@ -12,7 +12,7 @@ const Page: NextPage = async () => {
     <Stack gap="xlarge">
       <Stack gap="small">
         <Heading level={1}>Component theming</Heading>
-        <Text as="p">
+        <Text tag="p">
           Blockle components are built using a theming system that allows you to customize the
           appearance of the components to match your brand.
         </Text>
@@ -20,13 +20,13 @@ const Page: NextPage = async () => {
 
       <Stack gap="small">
         <Heading level={2}>Button example</Heading>
-        <Text as="p">
+        <Text tag="p">
           Below is an example of a button component with a custom theme applied. To create a theme
           for a specific component, you can use <code>makeComponentTheme()</code>. This function
           takes a component name and a theme object.
         </Text>
-        <Text as="p">We set the base styles and variants for the button component.</Text>
-        <Text as="p">
+        <Text tag="p">We set the base styles and variants for the button component.</Text>
+        <Text tag="p">
           The default variants can be specficied with <code>defaultVariants</code>
         </Text>
         <Markdown>{buttonExample}</Markdown>
@@ -34,13 +34,13 @@ const Page: NextPage = async () => {
 
       <Stack gap="small">
         <Heading level={2}>Compound variants</Heading>
-        <Text as="p">
+        <Text tag="p">
           To apply custom styling rules to a combination of variants, you can use compound variants.
         </Text>
         <Markdown>{compoundExample}</Markdown>
       </Stack>
 
-      <Text as="p">
+      <Text tag="p">
         For more examples of component theming, see{' '}
         <Link
           href="https://github.com/Blockle/blocks/tree/main/src/themes/momotaro/components"

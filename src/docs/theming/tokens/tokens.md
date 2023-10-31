@@ -55,6 +55,7 @@ export const tokens: ThemeTokens = {
   },
   typography: {
     fontFamily: {
+      body: '"Rubik", sans-serif',
       primary: '"Rubik", sans-serif',
       secondary: '"Rubik", sans-serif',
     },

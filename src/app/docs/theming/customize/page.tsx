@@ -11,14 +11,14 @@ const Page: NextPage = async () => {
     <Stack gap="xlarge">
       <Stack gap="small">
         <Heading level={1}>Creating your own Theme</Heading>
-        <Text as="p">
+        <Text tag="p">
           <Text fontWeight="strong" color="secondary">
             @blockle/blocks
           </Text>{' '}
           is built using a theming system that allows you to customize the appearance of the
           components to match your brand.
         </Text>
-        <Text as="p">
+        <Text tag="p">
           The theme object is a collection of tokens and component themes. Tokens are used to define
           the base styles. Component themes are used to define the variants and styling rules for
           each component.
@@ -27,7 +27,7 @@ const Page: NextPage = async () => {
 
       <Stack gap="small">
         <Heading level={2}>makeTheme</Heading>
-        <Text as="p">
+        <Text tag="p">
           To create a theme, you can use <code>makeTheme()</code>.
           <br />
           The result is a theme object that can be used with the <code>ThemeProvider</code>.
@@ -35,7 +35,7 @@ const Page: NextPage = async () => {
         <Markdown>{makeThemeExample}</Markdown>
       </Stack>
 
-      <Text as="p">
+      <Text tag="p">
         For a complete examples of component theming and tokens, see{' '}
         <Link
           href="https://github.com/Blockle/blocks/tree/main/src/themes/momotaro"

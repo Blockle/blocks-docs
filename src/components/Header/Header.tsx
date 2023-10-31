@@ -1,7 +1,7 @@
 import { Box, Inline, Text } from '@blockle/blocks';
 import Image from 'next/image';
-import Link from 'next/link';
 import { FC } from 'react';
+import { Link } from '../Link/Link';
 import * as styles from './header.css';
 
 export type HeaderProps = {};
@@ -9,7 +9,7 @@ export type HeaderProps = {};
 export const Header: FC<HeaderProps> = () => {
   return (
     <Box
-      as="header"
+      asChild
       backgroundColor="white"
       position={['sticky', 'static']}
       top={0}
@@ -19,12 +19,14 @@ export const Header: FC<HeaderProps> = () => {
       justifyContent="space-between"
       boxShadow="medium"
     >
-      <Link href="/">
-        <Inline gap="small" alignY="center">
-          <Image src="/blockle.png" alt="Logo" width={100} height={100} className={styles.logo} />
-          <Text fontSize="large">@blockle/blocks</Text>
-        </Inline>
-      </Link>
+      <header>
+        <Link variant="primary" href="/">
+          <Inline gap="small" alignY="center">
+            <Image src="/blockle.png" alt="Logo" width={100} height={100} className={styles.logo} />
+            <Text fontSize="large">@blockle/blocks</Text>
+          </Inline>
+        </Link>
+      </header>
       {/*
       <IconButton icon="bars-3" label="Open navigation" color="primary" /> */}
     </Box>
