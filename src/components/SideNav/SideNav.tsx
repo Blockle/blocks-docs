@@ -19,6 +19,7 @@ export const SideNav: FC = () => {
             <Divider color="textLight" />
             <Link href="/docs/theming/customize">Customize theme</Link>
             <Link href="/docs/theming/tokens">Tokens</Link>
+            <Link href="/docs/theming/styling">Styling</Link>
             <Link href="/docs/theming/component">Component theming</Link>
           </Stack>
 

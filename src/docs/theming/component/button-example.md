@@ -1,15 +1,13 @@
 ```typescript
-import { createVar, style } from '@vanilla-extract/css';
-import { makeComponentTheme, atoms, vars } from '@blockle/blocks';
+import { createVar } from '@vanilla-extract/css';
+import { makeComponentTheme, atoms, vars, style } from '@blockle/blocks';
 
 const primaryColor = createVar();
 
 export const button = makeComponentTheme('button', {
-  base: style([
-    atoms({
-      display: 'inline-flex',
-    }),
-  ]),
+  base: style({
+    display: 'inline-flex',
+  }),
   variants: {
     variant: {
       solid: style({
@@ -19,7 +17,7 @@ export const button = makeComponentTheme('button', {
       }),
       outline: style({
         color: primaryColor,
-        borderWidth: vars.borderWidth.small,
+        borderWidth: 'small',
         borderStyle: 'solid',
         borderColor: primaryColor,
         background: 'transparent',
@@ -31,12 +29,15 @@ export const button = makeComponentTheme('button', {
     },
     size: {
       small: style({
+        paddingX: 'large',
         height: 40,
       }),
       medium: style({
+        paddingX: 'xlarge',
         height: 56,
       }),
       large: style({
+        paddingX: 'xlarge',
         height: 72,
       }),
     },

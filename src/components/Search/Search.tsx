@@ -22,6 +22,8 @@ export const Search: FC = () => {
       <Dialog open={dialogOpen} onRequestClose={() => setDialogOpen(false)}>
         <Stack gap="large">
           <Input
+            // TODO Omit `label` prop
+            label=""
             name="search"
             placeholder="Search"
             autoFocus
