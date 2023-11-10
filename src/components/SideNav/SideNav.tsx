@@ -3,9 +3,14 @@ import { FC } from 'react';
 import { Link } from '../Link/Link';
 import * as styles from './sidenav.css';
 
-export const SideNav: FC = () => {
+type SideNavProps = {
+  open: boolean;
+  onClose: () => void;
+};
+
+export const SideNav: FC<SideNavProps> = ({ open, onClose }) => {
   return (
-    <Box asChild paddingTop="gutter" paddingX="small" className={styles.container}>
+    <Box asChild paddingTop="gutter" paddingX="small" className={styles.container} data-open={open}>
       <nav>
         <Stack gap="medium">
           <Stack gap="small">
@@ -49,6 +54,7 @@ export const SideNav: FC = () => {
             <Text color="textLight">Data Entry</Text>
             <Divider color="textLight" />
             <Link href="/docs/layout/input">Input</Link>
+            <Link href="/docs/layout/switch">Input</Link>
           </Stack>
 
           <Stack gap="small">

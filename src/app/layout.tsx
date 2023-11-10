@@ -29,9 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BlocksProvider theme={momotaro}>
           <Header />
 
-          <Navigation />
-
-          {children}
+          <Navigation>{children}</Navigation>
         </BlocksProvider>
       </body>
     </html>

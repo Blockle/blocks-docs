@@ -10,33 +10,29 @@ const Page: NextPage = async () => {
   return (
     <Stack gap="xlarge">
       <Stack gap="small">
-        <Heading level={1}>Creating your own Theme</Heading>
+        <Heading level={1}>Customizing Your Theme with @blockle/blocks</Heading>
         <Text tag="p">
-          <Text fontWeight="strong" color="secondary">
-            @blockle/blocks
-          </Text>{' '}
-          is built using a theming system that allows you to customize the appearance of the
-          components to match your brand.
+          <code>@blockle/blocks</code> comes equipped with a versatile theming system, empowering
+          you to tailor the look of its components to align seamlessly with your brand.
         </Text>
         <Text tag="p">
-          The theme object is a collection of tokens and component themes. Tokens are used to define
-          the base styles. Component themes are used to define the variants and styling rules for
-          each component.
+          The theme object acts as a repository for tokens and component themes. Tokens set the
+          groundwork for base styles, while component themes specify variations and styling rules
+          for individual components.
         </Text>
       </Stack>
 
       <Stack gap="small">
-        <Heading level={2}>makeTheme</Heading>
+        <Heading level={2}>Creating a Theme</Heading>
         <Text tag="p">
-          To create a theme, you can use <code>makeTheme()</code>.
-          <br />
-          The result is a theme object that can be used with the <code>ThemeProvider</code>.
+          Crafting a theme is a breeze with <code>makeTheme</code>. This function yields a theme
+          object that seamlessly integrates with the ThemeProvider.
         </Text>
         <Markdown>{makeThemeExample}</Markdown>
       </Stack>
 
       <Text tag="p">
-        For a complete examples of component theming and tokens, see{' '}
+        For comprehensive examples of component theming and tokens, refer to our GitHub repository.{' '}
         <Link
           href="https://github.com/Blockle/blocks/tree/main/src/themes/momotaro"
           target="_blank"

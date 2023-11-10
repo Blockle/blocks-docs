@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from '@blockle/blocks';
+import { Heading, Stack, Switch, Text } from '@blockle/blocks';
 import type { NextPage } from 'next';
 import { readMarkdownFile } from '../../../../api/readFile';
 import { Link } from '../../../../components/Link/Link';
@@ -11,10 +11,13 @@ const Page: NextPage = async () => {
   return (
     <Stack gap="xlarge">
       <Stack gap="small">
-        <Heading level={1}>Styling</Heading>
+        <Switch />
+
+        <Heading level={1}>Styling with Blocks</Heading>
         <Text tag="p">
-          With blocks, you can style your components using the <code>style</code> function. This
-          function takes a combination of atoms and raw CSS values as arguments.
+          When it comes to styling your components with Blocks, the process is made effortless
+          through the <code>style</code> function. This function accepts a blend of atoms and raw
+          CSS values as its parameters.
         </Text>
         <Text tag="p">
           This function is a drop-in replacement for the <code>style</code> function from{' '}
@@ -28,22 +31,60 @@ const Page: NextPage = async () => {
       <Stack gap="small">
         <Heading level={2}>Example</Heading>
         <Text tag="p">
-          So instead of writing code like this where we need to use <code>atoms</code> and the code
-          becomes somewhat harder to read:
+          Let&apos;s dive into an example. Instead of the somewhat intricate code structure using
+          atoms and @vanilla-extract/css:
         </Text>
         <Markdown>{vanillaExample}</Markdown>
 
-        <Text tag="p">
-          With the <code>style</code> function of blocks, we can write the same code like this:
-        </Text>
+        <Text tag="p">With Blocks, you can achieve the same outcome with cleaner code:</Text>
         <Markdown>{blocksExample}</Markdown>
 
         <Text tag="p">
-          Here we replaced the <code>style</code> function from <code>@vanilla-extract/css</code>{' '}
-          with the <code>style</code> function from blocks. It takes the same arguments and returns
-          the same result. The only difference is that you can use atoms directly instead of having
-          to wrap them in the <code>atoms</code> function.
+          Simply replace the style function from <code>@vanilla-extract/css</code> with Blocks{' '}
+          <code>style</code> function. They share the same arguments and produce identical results.
+          The only distinction is that with Blocks, you can use atoms directly, eliminating the need
+          to wrap them in the atoms function. Streamlining your styling process.
         </Text>
+      </Stack>
+
+      <Stack gap="small">
+        <Heading level={2}>Limitations</Heading>
+        <Text tag="p">
+          Atoms can only be used in the root level of the style object. This means that you cannot
+          use atoms in selectors or complexer style objects. For example:
+        </Text>
+        <Markdown>{`
+\`\`\`typescript
+import { style, vars } from '@blockle/blocks';
+
+const styles = style({
+  // ✅ Works
+  color: 'primary',
+  ':hover': {
+    // ❌ Does not work
+    color: 'secondary',
+  },
+});
+\`\`\`
+          `}</Markdown>
+        <Text tag="p">
+          To workaround this, you can use <code>vars</code> from <code>@blockle/blocks</code>{' '}
+          instead. For example:
+        </Text>
+        <Markdown>{`
+\`\`\`typescript
+import { style, vars } from '@blockle/blocks';
+
+const styles = style({
+  // ✅ Works
+  color: 'primary',
+  ':hover': {
+    // ✅ Works
+    color: vars.color.secondary,
+  },
+});
+\`\`\`
+          `}</Markdown>
       </Stack>
     </Stack>
   );
