@@ -9,8 +9,8 @@ const Page: NextPage = async () => {
   const blocksExample = await readMarkdownFile('theming/style/blocks-example');
 
   return (
-    <Stack gap="xlarge">
-      <Stack gap="small">
+    <Stack spacing="xlarge">
+      <Stack spacing="small">
         <Switch />
 
         <Heading level={1}>Styling with Blocks</Heading>
@@ -28,7 +28,7 @@ const Page: NextPage = async () => {
         </Text>
       </Stack>
 
-      <Stack gap="small">
+      <Stack spacing="small">
         <Heading level={2}>Example</Heading>
         <Text tag="p">
           Let&apos;s dive into an example. Instead of the somewhat intricate code structure using
@@ -47,7 +47,7 @@ const Page: NextPage = async () => {
         </Text>
       </Stack>
 
-      <Stack gap="small">
+      <Stack spacing="small">
         <Heading level={2}>Limitations</Heading>
         <Text tag="p">
           Atoms can only be used in the root level of the style object. This means that you cannot

@@ -20,14 +20,14 @@ export const Search: FC = () => {
       </Button>
 
       <Dialog open={dialogOpen} onRequestClose={() => setDialogOpen(false)}>
-        <Stack gap="large">
+        <Stack spacing="large">
           <Input
             // TODO Omit `label` prop
             label=""
             name="search"
             placeholder="Search"
             autoFocus
-            startSlot={<Box marginLeft="medium">🔍</Box>}
+            startSlot={<Box marginInlineStart="medium">🔍</Box>}
           />
 
           <Box>RESULTS</Box>

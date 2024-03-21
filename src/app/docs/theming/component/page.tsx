@@ -9,8 +9,8 @@ const Page: NextPage = async () => {
   const compoundExample = await readMarkdownFile('theming/component/compound-example');
 
   return (
-    <Stack gap="xlarge">
-      <Stack gap="small">
+    <Stack spacing="xlarge">
+      <Stack spacing="small">
         <Heading level={1}>Component theming</Heading>
         <Text tag="p">
           Blockle components are built using a theming system that allows you to customize the
@@ -18,7 +18,7 @@ const Page: NextPage = async () => {
         </Text>
       </Stack>
 
-      <Stack gap="small">
+      <Stack spacing="small">
         <Heading level={2}>Button example</Heading>
         <Text tag="p">
           Below is an example of a button component with a custom theme applied. To create a theme
@@ -32,7 +32,7 @@ const Page: NextPage = async () => {
         <Markdown>{buttonExample}</Markdown>
       </Stack>
 
-      <Stack gap="small">
+      <Stack spacing="small">
         <Heading level={2}>Compound variants</Heading>
         <Text tag="p">
           To apply custom styling rules to a combination of variants, you can use compound variants.

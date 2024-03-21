@@ -8,8 +8,8 @@ const Page: NextPage = async () => {
   const tokens = await readMarkdownFile('theming/tokens/tokens');
 
   return (
-    <Stack gap="xlarge">
-      <Stack gap="small">
+    <Stack spacing="xlarge">
+      <Stack spacing="small">
         <Heading level={1}>Tokens</Heading>
 
         <Text tag="p">

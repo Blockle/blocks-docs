@@ -10,7 +10,7 @@ export type MarkdownProps = {
 
 export const Markdown: React.FC<MarkdownProps> = ({ children, markdown }) => {
   return (
-    <Stack gap="medium">
+    <Stack spacing="medium">
       <MarkdownRenderer presets={GFM()} components={components}>
         {children || markdown || ''}
       </MarkdownRenderer>

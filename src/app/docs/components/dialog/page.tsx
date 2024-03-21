@@ -9,8 +9,8 @@ const Page: NextPage = async () => {
   const tokens = await readMarkdownFile('components/button/button-example');
 
   return (
-    <Stack gap="xlarge">
-      <Stack gap="small">
+    <Stack spacing="xlarge">
+      <Stack spacing="small">
         <Heading level={1}>Dialog</Heading>
 
         <Text tag="p">
@@ -19,7 +19,7 @@ const Page: NextPage = async () => {
         </Text>
       </Stack>
 
-      <Stack gap="small">
+      <Stack spacing="small">
         <Heading level={2}>Example</Heading>
 
         <Markdown>{tokens}</Markdown>

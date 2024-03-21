@@ -8,8 +8,8 @@ const Page: NextPage = async () => {
   const makeThemeExample = await readMarkdownFile('theming/make-theme-example');
 
   return (
-    <Stack gap="xlarge">
-      <Stack gap="small">
+    <Stack spacing="xlarge">
+      <Stack spacing="small">
         <Heading level={1}>Customizing Your Theme with @blockle/blocks</Heading>
         <Text tag="p">
           <code>@blockle/blocks</code> comes equipped with a versatile theming system, empowering
@@ -22,7 +22,7 @@ const Page: NextPage = async () => {
         </Text>
       </Stack>
 
-      <Stack gap="small">
+      <Stack spacing="small">
         <Heading level={2}>Creating a Theme</Heading>
         <Text tag="p">
           Crafting a theme is a breeze with <code>makeTheme</code>. This function yields a theme

@@ -8,8 +8,8 @@ const Page: NextPage = async () => {
   const tokens = await readMarkdownFile('components/toast/toast-example');
 
   return (
-    <Stack gap="xlarge">
-      <Stack gap="small">
+    <Stack spacing="xlarge">
+      <Stack spacing="small">
         <Heading level={1}>Toast</Heading>
 
         <Text tag="p">
@@ -20,7 +20,7 @@ const Page: NextPage = async () => {
         <Markdown>{tokens}</Markdown>
       </Stack>
 
-      <Stack gap="small">
+      <Stack spacing="small">
         <Heading level={2}>Example</Heading>
 
         <Box display="flex" justifyContent="center" gap="medium">

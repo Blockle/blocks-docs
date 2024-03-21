@@ -21,7 +21,7 @@ const LinkRenderer: MarkdownComponents['link'] = ({ children, href, title }) => 
 );
 
 const ListRenderer: MarkdownComponents['list'] = ({ children, ordered, start }) => (
-  <Stack tag={ordered ? 'ol' : 'ul'} start={start} gap="small">
+  <Stack tag={ordered ? 'ol' : 'ul'} start={start} spacing="small">
     {children}
   </Stack>
 );

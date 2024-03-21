@@ -12,8 +12,8 @@ export const ExampleDialog: FC = () => {
         Open dialog
       </Button>
       <Dialog open={open} onRequestClose={() => setOpen(false)}>
-        <Stack gap="large">
-          <Stack gap="xsmall">
+        <Stack spacing="large">
+          <Stack spacing="xsmall">
             <Heading level={1}>Dialog</Heading>
 
             <Text tag="p">

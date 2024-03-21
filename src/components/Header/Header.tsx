@@ -12,7 +12,7 @@ export const Header: FC<HeaderProps> = () => {
       asChild
       backgroundColor="white"
       position={['sticky', 'static']}
-      top={0}
+      insetBlockStart={0}
       padding="small"
       display="flex"
       alignItems="center"
@@ -21,7 +21,7 @@ export const Header: FC<HeaderProps> = () => {
     >
       <header>
         <Link variant="primary" href="/">
-          <Inline gap="small" alignY="center">
+          <Inline spacing="small" alignY="center">
             <Image src="/blockle.png" alt="Logo" width={100} height={100} className={styles.logo} />
             <Text fontSize="large">@blockle/blocks</Text>
           </Inline>

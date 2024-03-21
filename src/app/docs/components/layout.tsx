@@ -9,7 +9,7 @@ export const metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Box paddingX="xsmall" paddingY="medium">
+      <Box paddingInline="xsmall" paddingBlock="medium">
         <Link href="/">Back</Link>
       </Box>
 

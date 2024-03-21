@@ -5,7 +5,7 @@ import { Link } from '../components/Link/Link';
 const HomePage: NextPage = () => {
   return (
     <Box padding="gutter">
-      <Stack gap="large" alignX="center">
+      <Stack spacing="large" alignX="center">
         <Heading level={1}>
           Build acccesible React apps with{' '}
           <Text fontWeight="strong" color="secondary">
@@ -20,7 +20,7 @@ const HomePage: NextPage = () => {
           is a design system for React written in TypeScript and vanilla-extract.
         </Text>
 
-        <Stack gap="small" alignX="center">
+        <Stack spacing="small" alignX="center">
           <Link href="/docs">Get started</Link>
         </Stack>
       </Stack>
