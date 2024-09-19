@@ -16,10 +16,10 @@ export const Navigation: FC<NavigationProps> = ({ children }) => {
     <>
       <Box display="flex" justifyContent="space-between" backgroundColor="primary" padding="medium">
         <Box asChild display={['block', 'none']}>
-          <Button onClick={() => setIsSideNavOpen((a) => !a)}>Navigation</Button>
+          <Button onClick={() => setIsSideNavOpen((isOpen) => !isOpen)}>Navigation</Button>
         </Box>
 
-        <Box alignSelf="flex-end">
+        <Box marginInlineStart="auto">
           <Search />
         </Box>
       </Box>

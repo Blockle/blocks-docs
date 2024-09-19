@@ -7,7 +7,7 @@ export const Search: FC = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
-    <Box>
+    <>
       <Button
         type="button"
         variant="solid"
@@ -33,6 +33,6 @@ export const Search: FC = () => {
           <Box>RESULTS</Box>
         </Stack>
       </Dialog>
-    </Box>
+    </>
   );
 };
