@@ -1,12 +1,10 @@
 import { Box, Inline, Text } from '@blockle/blocks';
 import Image from 'next/image';
-import { FC } from 'react';
+import type { FC } from 'react';
 import { Link } from '../Link/Link';
 import * as styles from './header.css';
 
-export type HeaderProps = {};
-
-export const Header: FC<HeaderProps> = () => {
+export const Header: FC = () => {
   return (
     <Box
       asChild
@@ -23,7 +21,9 @@ export const Header: FC<HeaderProps> = () => {
         <Link variant="primary" href="/">
           <Inline spacing="small" alignY="center">
             <Image src="/blockle.png" alt="Logo" width={100} height={100} className={styles.logo} />
-            <Text fontSize="large">@blockle/blocks</Text>
+            <Text fontSize="large" fontWeight="regular">
+              @blockle/blocks
+            </Text>
           </Inline>
         </Link>
       </header>

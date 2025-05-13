@@ -1,22 +1,16 @@
 'use client';
 
 import { Box, Button } from '@blockle/blocks';
-import { FC } from 'react';
-import { Markdown } from '../Markdown/Markdown';
+import type { FC } from 'react';
+import { SyntaxHighlighter } from '../SyntaxHighlighter/SyntaxHighlighter';
 
-export type CopyCodeBlockProps = {
-  children: string;
-  language: 'sh' | 'ts' | 'tsx';
-};
+export type CopyCodeBlockProps = { children: string; language: 'bash' | 'ts' | 'tsx' };
 
 export const CopyCodeBlock: FC<CopyCodeBlockProps> = ({ children, language }) => {
-  // Render as markdown for syntax highlighting
-  const markdown = '```' + language + '\n' + children + '\n```';
-
   return (
     <Box display="flex" gap="large" justifyContent="space-between" alignItems="center">
       <Box flexGrow={1}>
-        <Markdown markdown={markdown} />
+        <SyntaxHighlighter language={language}>{children}</SyntaxHighlighter>
       </Box>
 
       <Button

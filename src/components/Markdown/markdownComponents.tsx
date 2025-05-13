@@ -1,5 +1,5 @@
 import { Box, Heading, Link, Stack, Text } from '@blockle/blocks';
-import { MarkdownComponents } from '@md-parser/react';
+import type { MarkdownComponents } from '@md-parser/react';
 import { SyntaxHighlighter } from '../SyntaxHighlighter/SyntaxHighlighter';
 
 const HeadingRenderer: MarkdownComponents['heading'] = ({ children, level }) => (

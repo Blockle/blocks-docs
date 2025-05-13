@@ -14,26 +14,27 @@
     "ts": "tsc --noemit --project ./tsconfig.json"
   },
   "dependencies": {
-    "@blockle/blocks": "^0.15.3",
+    "@blockle/blocks": "^1.0.6",
+    "@blockle/blocks-theme-momotaro": "^1.0.4",
     "@md-parser/parser": "^0.11.1",
-    "@md-parser/react": "^1.0.3",
-    "next": "^14.2.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@md-parser/react": "^1.0.5",
+    "next": "^15.3.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-helmet": "^6.1.0",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.6.1"
   },
   "devDependencies": {
-    "@types/node": "^22.5.5",
-    "@types/react": "^18.2.67",
-    "@types/react-dom": "^18.2.22",
+    "@types/node": "^22.15.17",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "@types/react-syntax-highlighter": "^15.5.11",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/parser": "^7.3.1",
-    "@vanilla-extract/babel-plugin": "^1.2.0",
-    "@vanilla-extract/css": "^1.14.1",
+    "@vanilla-extract/babel-plugin": "^0.4.0",
+    "@vanilla-extract/css": "^1.17.2",
     "@vanilla-extract/css-utils": "^0.1.3",
-    "@vanilla-extract/next-plugin": "^2.3.7",
+    "@vanilla-extract/next-plugin": "^2.4.11",
     "@vanilla-extract/sprinkles": "^1.6.1",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.1.4",
@@ -43,6 +44,6 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.2"
+    "typescript": "^5.8.3"
   }
 }
