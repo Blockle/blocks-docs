@@ -1,16 +1,19 @@
 import { Box } from '@blockle/blocks';
-import { readFile } from 'fs/promises';
-import type { NextPage } from 'next';
-import path from 'path';
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 import { Markdown } from '../../../../components/Markdown/Markdown';
 import { validParams } from '../../../../utils/readMarkdown';
 
-type Params = {
-  group: string;
-  id: string;
+type Params = { group: string; id: string };
+
+type PageProps = {
+  params: Promise<Params>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-const Page: NextPage<{ params: Params }> = async ({ params: { group, id } }) => {
+const Page = async ({ params }: PageProps) => {
+  const { group, id } = await params;
+
   if (!validParams(group, id)) {
     return (
       <Box>
@@ -28,11 +31,7 @@ const Page: NextPage<{ params: Params }> = async ({ params: { group, id } }) => 
     console.log('Failed to read file', e);
   }
 
-  return (
-    <>
-      <Markdown>{contents}</Markdown>
-    </>
-  );
+  return <Markdown>{contents}</Markdown>;
 };
 
 export default Page;
