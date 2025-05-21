@@ -1,4 +1,4 @@
-import { Box, Heading, Stack, Text } from '@blockle/blocks';
+import { Box, Heading, Stack, Text, Tooltip } from '@blockle/blocks';
 import type { NextPage } from 'next';
 import { Link } from '../components/Link/Link';
 
@@ -21,7 +21,11 @@ const HomePage: NextPage = () => {
         </Text>
 
         <Stack spacing="small" alignX="center">
-          <Link href="/docs">Get started</Link>
+          <Tooltip content="Continue to learn more">
+            <span>
+              <Link href="/docs">Get started</Link>
+            </span>
+          </Tooltip>
         </Stack>
       </Stack>
     </Box>
