@@ -14,7 +14,7 @@
     "ts": "tsc --noemit --project ./tsconfig.json"
   },
   "dependencies": {
-    "@blockle/blocks": "^1.0.6",
+    "@blockle/blocks": "^1.0.10",
     "@blockle/blocks-theme-momotaro": "^1.0.4",
     "@md-parser/parser": "^0.11.1",
     "@md-parser/react": "^1.0.5",
@@ -22,7 +22,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-helmet": "^6.1.0",
-    "react-syntax-highlighter": "^15.6.1"
+    "react-syntax-highlighter": "^5.8.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.17",

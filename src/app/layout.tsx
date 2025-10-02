@@ -1,8 +1,6 @@
-// First import is reset.css
-import '@blockle/blocks/reset';
-
 import { BlocksProvider } from '@blockle/blocks';
 import { momotaro } from '@blockle/blocks-theme-momotaro';
+import '@blockle/blocks/reset';
 import { Rubik } from 'next/font/google';
 import { Header } from '../components/Header/Header';
 import { Navigation } from '../components/Navigation/Navigation';
@@ -19,13 +17,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head />
-      <BlocksProvider theme={momotaro} asChild>
-        <body className={rubik.className}>
+      <body className={rubik.className}>
+        <BlocksProvider theme={momotaro}>
           {/* TODO add spriteUrl="/icons.svg" and linkComponent={Link} */}
           <Header />
           <Navigation>{children}</Navigation>
-        </body>
-      </BlocksProvider>
+        </BlocksProvider>
+      </body>
     </html>
   );
 }
