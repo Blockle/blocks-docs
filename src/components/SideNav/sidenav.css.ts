@@ -10,7 +10,10 @@ export const container = style([
     zIndex: 1,
     selectors: { '&[data-open="true"]': { transform: 'translateX(0)', opacity: 1 } },
     '@media': {
-      '(prefers-reduced-motion: no-preference)': { opacity: 0, transition: 'all 160ms' },
+      '(prefers-reduced-motion: no-preference)': {
+        opacity: 0,
+        transition: 'transform 160ms, opacity 160ms',
+      },
       [minMediaQuery('desktop')]: { position: 'static', opacity: 1, transform: 'unset' },
     },
   },

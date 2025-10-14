@@ -10,8 +10,7 @@ export const Search: FC = () => {
     <>
       <Button
         type="button"
-        variant="solid"
-        intent="danger"
+        intent="neutral"
         onClick={() => {
           setDialogOpen(true);
         }}
