@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Button, Dialog, Input, Stack } from '@blockle/blocks';
-import { FC, useState } from 'react';
+import { type FC, useState } from 'react';
 
 export const Search: FC = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
