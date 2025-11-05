@@ -1,6 +1,7 @@
 import { Box, Inline, Text } from '@blockle/blocks';
 import Image from 'next/image';
 import type { FC } from 'react';
+
 import { Link } from '../Link/Link';
 import * as styles from './header.css';
 
@@ -11,7 +12,7 @@ export const Header: FC = () => {
       backgroundColor="white"
       position={['sticky', 'static']}
       insetBlockStart={0}
-      padding="small"
+      padding={2}
       display="flex"
       alignItems="center"
       justifyContent="space-between"
@@ -19,9 +20,15 @@ export const Header: FC = () => {
     >
       <header>
         <Link variant="primary" href="/">
-          <Inline spacing="small" alignY="center">
-            <Image src="/blockle.png" alt="Logo" width={100} height={100} className={styles.logo} />
-            <Text fontSize="large" fontWeight="regular">
+          <Inline gap={2} alignY="center">
+            <Image
+              src="/blockle.png"
+              alt="Logo"
+              width={100}
+              height={100}
+              className={styles.logo}
+            />
+            <Text fontSize="large" fontWeight="normal">
               @blockle/blocks
             </Text>
           </Inline>

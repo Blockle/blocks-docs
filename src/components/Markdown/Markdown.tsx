@@ -1,6 +1,7 @@
 import { Stack } from '@blockle/blocks';
 import { GFM } from '@md-parser/parser';
 import { MarkdownRenderer } from '@md-parser/react';
+
 import { components } from './markdownComponents';
 
 export type MarkdownProps = {
@@ -10,7 +11,7 @@ export type MarkdownProps = {
 
 export const Markdown: React.FC<MarkdownProps> = ({ children, markdown }) => {
   return (
-    <Stack spacing="medium">
+    <Stack gap={3}>
       <MarkdownRenderer presets={GFM()} components={components}>
         {children || markdown || ''}
       </MarkdownRenderer>

@@ -1,7 +1,11 @@
+import withBundleAnalyzer from '@next/bundle-analyzer';
 import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
 import type { NextConfig } from 'next';
 
-const withVanillaExtract = createVanillaExtractPlugin();
+const vanillaExtract = createVanillaExtractPlugin();
+const bundleAnalyzer = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
 
 const nextConfig = {
   // experimental: {
@@ -13,4 +17,4 @@ const nextConfig = {
   images: { unoptimized: true },
 } satisfies NextConfig;
 
-module.exports = withVanillaExtract(nextConfig);
+export default vanillaExtract(bundleAnalyzer(nextConfig));

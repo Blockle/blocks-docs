@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Dialog, Heading, Stack, Text } from '@blockle/blocks';
-import { FC, useState } from 'react';
+import { type FC, useState } from 'react';
 
 export const ExampleDialog: FC = () => {
   const [open, setOpen] = useState(false);
@@ -12,12 +12,13 @@ export const ExampleDialog: FC = () => {
         Open dialog
       </Button>
       <Dialog open={open} onRequestClose={() => setOpen(false)}>
-        <Stack spacing="large">
-          <Stack spacing="xsmall">
+        <Stack gap={4}>
+          <Stack gap={2}>
             <Heading level={1}>Dialog</Heading>
 
             <Text tag="p">
-              Dialog is a component that is used to display content on top of the current page.
+              Dialog is a component that is used to display content on top of
+              the current page.
             </Text>
           </Stack>
 

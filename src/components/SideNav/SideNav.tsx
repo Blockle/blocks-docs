@@ -1,5 +1,6 @@
 import { Box, Divider, Stack, Text } from '@blockle/blocks';
-import { FC } from 'react';
+import type { FC } from 'react';
+
 import { Link } from '../Link/Link';
 import * as styles from './sidenav.css';
 
@@ -10,10 +11,10 @@ type SideNavProps = {
 
 export const SideNav: FC<SideNavProps> = ({ open, onClose }) => {
   return (
-    <Box asChild padding="small" className={styles.container} data-open={open}>
+    <Box asChild padding={2} className={styles.container} data-open={open}>
       <nav>
-        <Stack spacing="medium">
-          <Stack spacing="small">
+        <Stack gap={3}>
+          <Stack gap={2}>
             <Text color="text-900" fontWeight="medium">
               General
             </Text>
@@ -21,7 +22,7 @@ export const SideNav: FC<SideNavProps> = ({ open, onClose }) => {
             <Link href="/docs">Get started</Link>
           </Stack>
 
-          <Stack spacing="small">
+          <Stack gap={2}>
             <Text color="text-900" fontWeight="medium">
               Theming
             </Text>
@@ -32,7 +33,7 @@ export const SideNav: FC<SideNavProps> = ({ open, onClose }) => {
             <Link href="/docs/theming/component">Component theming</Link>
           </Stack>
 
-          <Stack spacing="small">
+          <Stack gap={2}>
             <Text color="text-900">Layout</Text>
             <Divider color="text-400" />
             <Link href="/docs/layout/box">Box</Link>
@@ -40,28 +41,28 @@ export const SideNav: FC<SideNavProps> = ({ open, onClose }) => {
             <Link href="/docs/layout/inline">Inline</Link>
           </Stack>
 
-          <Stack spacing="small">
+          <Stack gap={2}>
             <Text color="text-900">Typography</Text>
             <Divider color="text-400" />
             <Link href="/docs/layout/text">Text</Link>
             <Link href="/docs/layout/heading">Heading</Link>
           </Stack>
 
-          <Stack spacing="small">
+          <Stack gap={2}>
             <Text color="text-900">Navigation</Text>
             <Divider color="text-400" />
             <Link href="/docs/layout/link">Link</Link>
             <Link href="/docs/layout/xxx">ButtonLink?</Link>
           </Stack>
 
-          <Stack spacing="small">
+          <Stack gap={2}>
             <Text color="text-900">Data Entry</Text>
             <Divider color="text-400" />
             <Link href="/docs/layout/input">Input</Link>
             <Link href="/docs/layout/switch">Input</Link>
           </Stack>
 
-          <Stack spacing="small">
+          <Stack gap={2}>
             <Text color="text-900">Notifications</Text>
             <Divider color="text-400" />
             <Link href="/docs/components/toast">Toast</Link>
