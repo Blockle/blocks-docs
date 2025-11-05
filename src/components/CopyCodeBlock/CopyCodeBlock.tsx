@@ -1,7 +1,7 @@
 'use client';
 
-import { Alert, Box, Button, Toast } from '@blockle/blocks';
-import { type FC, useState } from 'react';
+import { Box, Button, useToast } from '@blockle/blocks';
+import type { FC } from 'react';
 
 import { SyntaxHighlighter } from '../SyntaxHighlighter/SyntaxHighlighter';
 
@@ -14,9 +14,7 @@ export const CopyCodeBlock: FC<CopyCodeBlockProps> = ({
   children,
   language,
 }) => {
-  const [copyState, setCopyState] = useState<'idle' | 'copied' | 'error'>(
-    'idle',
-  );
+  const { showToast } = useToast();
 
   return (
     <Box
@@ -35,32 +33,24 @@ export const CopyCodeBlock: FC<CopyCodeBlockProps> = ({
         onClick={() => {
           navigator.clipboard.writeText(children).then(
             () => {
-              setCopyState('copied');
+              showToast({
+                children: 'Copied to clipboard',
+                intent: 'success',
+                duration: 3000,
+              });
             },
             () => {
-              setCopyState('error');
+              showToast({
+                children: 'Failed to copy to clipboard',
+                intent: 'error',
+                duration: 3000,
+              });
             },
           );
         }}
       >
         COPY
       </Button>
-
-      <Toast
-        open={copyState !== 'idle'}
-        onRequestClose={() => setCopyState('idle')}
-        duration={3000}
-      >
-        <Alert
-          intent={copyState === 'error' ? 'error' : 'success'}
-          open
-          onRequestClose={() => setCopyState('idle')}
-        >
-          {copyState === 'copied'
-            ? 'Copied to clipboard'
-            : 'Failed to copy to clipboard'}
-        </Alert>
-      </Toast>
     </Box>
   );
 };
