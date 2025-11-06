@@ -1,10 +1,12 @@
 import { Box, Heading, Link, Stack, Text } from '@blockle/blocks';
 import type { MarkdownComponents } from '@md-parser/react';
+
 import { SyntaxHighlighter } from '../SyntaxHighlighter/SyntaxHighlighter';
 
-const HeadingRenderer: MarkdownComponents['heading'] = ({ children, level }) => (
-  <Heading level={level}>{children}</Heading>
-);
+const HeadingRenderer: MarkdownComponents['heading'] = ({
+  children,
+  level,
+}) => <Heading level={level}>{children}</Heading>;
 
 const ParagraphRenderer: MarkdownComponents['paragraph'] = ({ children }) => (
   <Text tag="p">{children}</Text>
@@ -14,44 +16,69 @@ const BlockquoteRenderer: MarkdownComponents['blockquote'] = ({ children }) => (
   <blockquote>{children}</blockquote>
 );
 
-const LinkRenderer: MarkdownComponents['link'] = ({ children, href, title }) => (
+const LinkRenderer: MarkdownComponents['link'] = ({
+  children,
+  href,
+  title,
+}) => (
   <Link href={href} title={title}>
     {children}
   </Link>
 );
 
-const ListRenderer: MarkdownComponents['list'] = ({ children, ordered, start }) => (
-  <Stack tag={ordered ? 'ol' : 'ul'} start={start} spacing="small">
+const ListRenderer: MarkdownComponents['list'] = ({
+  children,
+  ordered,
+  start,
+}) => (
+  <Stack tag={ordered ? 'ol' : 'ul'} start={start} gap={2}>
     {children}
   </Stack>
 );
 
-const ListItemRenderer: MarkdownComponents['listItem'] = ({ children }) => <li>{children}</li>;
+const ListItemRenderer: MarkdownComponents['listItem'] = ({ children }) => (
+  <li>{children}</li>
+);
 
 const ImageRenderer: MarkdownComponents['image'] = ({ alt, src, title }) => (
-  // eslint-disable-next-line @next/next/no-img-element
-  <img loading="lazy" src={src} alt={alt} title={title} width={700} height={500} />
+  // biome-ignore lint/performance/noImgElement: <img> is fine here
+  <img
+    loading="lazy"
+    src={src}
+    alt={alt}
+    title={title}
+    width={700}
+    height={500}
+  />
 );
 
-const StrongRenderer: MarkdownComponents['strong'] = ({ children }) => <strong>{children}</strong>;
-
-const ItalicRenderer: MarkdownComponents['emphasis'] = ({ children }) => <em>{children}</em>;
-
-const StrikeThroughRenderer: MarkdownComponents['strikeThrough'] = ({ children }) => (
-  <del>{children}</del>
+const StrongRenderer: MarkdownComponents['strong'] = ({ children }) => (
+  <strong>{children}</strong>
 );
 
-const SubscriptRenderer: MarkdownComponents['subscript'] = ({ children }) => <sub>{children}</sub>;
-
-const SuperscriptRenderer: MarkdownComponents['superscript'] = ({ children }) => (
-  <sup>{children}</sup>
+const ItalicRenderer: MarkdownComponents['emphasis'] = ({ children }) => (
+  <em>{children}</em>
 );
+
+const StrikeThroughRenderer: MarkdownComponents['strikeThrough'] = ({
+  children,
+}) => <del>{children}</del>;
+
+const SubscriptRenderer: MarkdownComponents['subscript'] = ({ children }) => (
+  <sub>{children}</sub>
+);
+
+const SuperscriptRenderer: MarkdownComponents['superscript'] = ({
+  children,
+}) => <sup>{children}</sup>;
 
 const CodeRenderer: MarkdownComponents['code'] = ({ value, language }) => (
   <SyntaxHighlighter language={language || 'ts'}>{value}</SyntaxHighlighter>
 );
 
-const InlineCodeRenderer: MarkdownComponents['inlineCode'] = ({ value }) => <code>{value}</code>;
+const InlineCodeRenderer: MarkdownComponents['inlineCode'] = ({ value }) => (
+  <code>{value}</code>
+);
 
 const TableRenderer: MarkdownComponents['table'] = ({ header, rows }) => (
   <table className="table-fixed">
@@ -60,15 +87,23 @@ const TableRenderer: MarkdownComponents['table'] = ({ header, rows }) => (
   </table>
 );
 
-const TableRowRenderer: MarkdownComponents['tableRow'] = ({ children }) => <tr>{children}</tr>;
+const TableRowRenderer: MarkdownComponents['tableRow'] = ({ children }) => (
+  <tr>{children}</tr>
+);
 
-const TableHeaderRenderer: MarkdownComponents['tableHeader'] = ({ children, align }) => (
+const TableHeaderRenderer: MarkdownComponents['tableHeader'] = ({
+  children,
+  align,
+}) => (
   <Box asChild style={{ textAlign: align }}>
     <th>{children}</th>
   </Box>
 );
 
-const TableDataRenderer: MarkdownComponents['tableData'] = ({ children, align }) => (
+const TableDataRenderer: MarkdownComponents['tableData'] = ({
+  children,
+  align,
+}) => (
   <Box asChild style={{ textAlign: align }}>
     <td>{children}</td>
   </Box>
@@ -76,7 +111,10 @@ const TableDataRenderer: MarkdownComponents['tableData'] = ({ children, align })
 
 const DividerRenderer: MarkdownComponents['divider'] = () => <hr />;
 
-const CheckboxRenderer: MarkdownComponents['checkbox'] = ({ checked, children }) => (
+const CheckboxRenderer: MarkdownComponents['checkbox'] = ({
+  checked,
+  children,
+}) => (
   <label>
     <input type="checkbox" readOnly checked={checked} />
     {children}

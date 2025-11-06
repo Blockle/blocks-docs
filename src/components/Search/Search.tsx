@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Button, Dialog, Input, Stack } from '@blockle/blocks';
+import { Box, Button, Dialog, Stack, TextInput } from '@blockle/blocks';
 import { type FC, useState } from 'react';
 
 export const Search: FC = () => {
@@ -19,14 +19,12 @@ export const Search: FC = () => {
       </Button>
 
       <Dialog open={dialogOpen} onRequestClose={() => setDialogOpen(false)}>
-        <Stack spacing="large">
-          <Input
-            // TODO Omit `label` prop
-            label=""
+        <Stack gap={4}>
+          <TextInput
             name="search"
             placeholder="Search"
             autoFocus
-            startSlot={<Box marginInlineStart="medium">🔍</Box>}
+            startSlot={<Box marginInlineStart={2}>🔍</Box>}
           />
 
           <Box>RESULTS</Box>

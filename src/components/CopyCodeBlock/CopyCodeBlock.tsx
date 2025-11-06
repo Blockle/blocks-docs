@@ -1,14 +1,28 @@
 'use client';
 
-import { Box, Button } from '@blockle/blocks';
+import { Box, Button, useToast } from '@blockle/blocks';
 import type { FC } from 'react';
+
 import { SyntaxHighlighter } from '../SyntaxHighlighter/SyntaxHighlighter';
 
-export type CopyCodeBlockProps = { children: string; language: 'bash' | 'ts' | 'tsx' };
+export type CopyCodeBlockProps = {
+  children: string;
+  language: 'bash' | 'ts' | 'tsx';
+};
 
-export const CopyCodeBlock: FC<CopyCodeBlockProps> = ({ children, language }) => {
+export const CopyCodeBlock: FC<CopyCodeBlockProps> = ({
+  children,
+  language,
+}) => {
+  const { showToast } = useToast();
+
   return (
-    <Box display="flex" gap="large" justifyContent="space-between" alignItems="center">
+    <Box
+      display="flex"
+      gap={4}
+      justifyContent="space-between"
+      alignItems="center"
+    >
       <Box flexGrow={1}>
         <SyntaxHighlighter language={language}>{children}</SyntaxHighlighter>
       </Box>
@@ -19,12 +33,18 @@ export const CopyCodeBlock: FC<CopyCodeBlockProps> = ({ children, language }) =>
         onClick={() => {
           navigator.clipboard.writeText(children).then(
             () => {
-              // TODO Should show a toast instead of an alert
-              alert('Copied to clipboard');
+              showToast({
+                children: 'Copied to clipboard',
+                intent: 'success',
+                duration: 3000,
+              });
             },
             () => {
-              // TODO Should show a toast instead of an alert
-              alert('Failed to copy to clipboard');
+              showToast({
+                children: 'Failed to copy to clipboard',
+                intent: 'error',
+                duration: 3000,
+              });
             },
           );
         }}

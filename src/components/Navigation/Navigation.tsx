@@ -1,7 +1,8 @@
 'use client';
 
 import { Box, Button } from '@blockle/blocks';
-import { FC, useState } from 'react';
+import { type FC, useState } from 'react';
+
 import { Search } from '../Search/Search';
 import { SideNav } from '../SideNav/SideNav';
 
@@ -18,10 +19,12 @@ export const Navigation: FC<NavigationProps> = ({ children }) => {
         display="flex"
         justifyContent="space-between"
         backgroundColor="primary-600"
-        padding="medium"
+        padding={3}
       >
         <Box asChild display={['block', 'none']}>
-          <Button onClick={() => setIsSideNavOpen((isOpen) => !isOpen)}>Navigation</Button>
+          <Button onClick={() => setIsSideNavOpen((isOpen) => !isOpen)}>
+            Navigation
+          </Button>
         </Box>
 
         <Box marginInlineStart="auto">
@@ -32,7 +35,7 @@ export const Navigation: FC<NavigationProps> = ({ children }) => {
       <Box display="flex">
         <SideNav open={isSideNavOpen} onClose={() => setIsSideNavOpen(false)} />
 
-        <Box padding="gutter" flexGrow={1} overflow="auto">
+        <Box padding={6} flexGrow={1} overflow="auto">
           {children}
         </Box>
       </Box>
