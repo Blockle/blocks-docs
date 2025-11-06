@@ -8,7 +8,7 @@ const HomePage: NextPage = () => {
       <Stack spacing="large" alignX="center">
         <Heading level={1}>
           Build accessible React apps with{' '}
-          <Text fontWeight="strong" color="secondary">
+          <Text fontWeight="strong" color="secondary-500">
             @blockle/blocks
           </Text>
         </Heading>

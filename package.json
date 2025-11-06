@@ -6,6 +6,7 @@
   "author": "Niek Saarberg <n.saarberg@gmail.com>",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,7 +16,7 @@
   },
   "dependencies": {
     "@blockle/blocks": "^1.0.10",
-    "@blockle/blocks-theme-momotaro": "^1.0.4",
+    "@blockle/blocks-theme-momotaro": "^4.0.0",
     "@md-parser/parser": "^0.11.1",
     "@md-parser/react": "^1.0.5",
     "next": "^15.3.2",
