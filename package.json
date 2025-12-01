@@ -31,7 +31,6 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@types/react-syntax-highlighter": "^15.5.13",
-    "@vanilla-extract/babel-plugin": "^0.4.2",
     "@vanilla-extract/css": "^1.17.5",
     "@vanilla-extract/css-utils": "^0.1.6",
     "@vanilla-extract/next-plugin": "^2.4.16",
