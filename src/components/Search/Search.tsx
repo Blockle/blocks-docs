@@ -3,6 +3,8 @@
 import { Box, Button, Dialog, Stack, TextInput } from '@blockle/blocks';
 import { type FC, useState } from 'react';
 
+import { HeroIcon } from '../HeroIcon/HeroIcon';
+
 export const Search: FC = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -10,12 +12,14 @@ export const Search: FC = () => {
     <>
       <Button
         type="button"
-        intent="neutral"
+        intent="secondary"
+        size="small"
         onClick={() => {
           setDialogOpen(true);
         }}
+        endSlot={<HeroIcon name="magnifying-glass" size="small" />}
       >
-        🔍 Search
+        Search
       </Button>
 
       <Dialog open={dialogOpen} onRequestClose={() => setDialogOpen(false)}>
@@ -24,7 +28,7 @@ export const Search: FC = () => {
             name="search"
             placeholder="Search"
             autoFocus
-            startSlot={<Box marginInlineStart={2}>🔍</Box>}
+            startSlot={<HeroIcon name="magnifying-glass" size="small" />}
           />
 
           <Box>RESULTS</Box>

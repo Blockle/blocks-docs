@@ -1,5 +1,6 @@
 import { Link } from '@blockle/blocks';
 import type { NextPage } from 'next';
+
 import { Markdown } from '../../../../components/Markdown/Markdown';
 
 const LinkPage: NextPage = async () => {

@@ -18,11 +18,14 @@ export const Navigation: FC<NavigationProps> = ({ children }) => {
       <Box
         display="flex"
         justifyContent="space-between"
-        backgroundColor="primary-600"
-        padding={3}
+        backgroundColor="primary-200"
+        padding={2}
       >
         <Box asChild display={['block', 'none']}>
-          <Button onClick={() => setIsSideNavOpen((isOpen) => !isOpen)}>
+          <Button
+            size="small"
+            onClick={() => setIsSideNavOpen((isOpen) => !isOpen)}
+          >
             Navigation
           </Button>
         </Box>

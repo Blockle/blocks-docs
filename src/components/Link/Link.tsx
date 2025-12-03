@@ -1,5 +1,8 @@
-import { Link as BlocksLink, LinkProps as BlocksLinkProps } from '@blockle/blocks';
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
+import {
+  Link as BlocksLink,
+  type LinkProps as BlocksLinkProps,
+} from '@blockle/blocks';
+import NextLink, { type LinkProps as NextLinkProps } from 'next/link';
 import type { FC } from 'react';
 
 export type LinkProps = Omit<NextLinkProps, 'as'> & Omit<BlocksLinkProps, 'as'>;

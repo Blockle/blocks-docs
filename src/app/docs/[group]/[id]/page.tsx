@@ -1,8 +1,9 @@
 import { Box } from '@blockle/blocks';
-import { readFile } from 'node:fs/promises';
-import path from 'node:path';
+
 import { Markdown } from '../../../../components/Markdown/Markdown';
 import { validParams } from '../../../../utils/readMarkdown';
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 
 type Params = { group: string; id: string };
 

@@ -16,7 +16,7 @@ export const Header: FC = () => {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
-      boxShadow="medium"
+      boxShadow={2}
     >
       <header>
         <Link variant="primary" href="/">

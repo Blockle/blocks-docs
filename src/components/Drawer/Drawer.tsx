@@ -1,6 +1,6 @@
 // import { useVisibilityState } from '@blockle/blocks';
 import { Box } from '@blockle/blocks';
-import { FC, ReactNode, useState } from 'react';
+import { type FC, type ReactNode, useState } from 'react';
 
 export type DrawerProps = {
   children?: ReactNode;
