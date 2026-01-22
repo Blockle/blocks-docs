@@ -17,8 +17,8 @@
     "ts": "tsc --noemit --project ./tsconfig.json"
   },
   "dependencies": {
-    "@blockle/blocks": "^2.3.9",
-    "@blockle/blocks-theme-momotaro": "^6.2.4",
+    "@blockle/blocks": "^2.3.10",
+    "@blockle/blocks-theme-momotaro": "^6.2.5",
     "@md-parser/parser": "^0.11.1",
     "@md-parser/react": "^1.0.5",
     "@next/bundle-analyzer": "^16.1.4",

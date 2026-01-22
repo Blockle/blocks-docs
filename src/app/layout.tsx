@@ -4,6 +4,7 @@ import '@blockle/blocks/reset';
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 
+import { CenterInput } from '../components/CenterInput/CenterInput';
 import { Header } from '../components/Header/Header';
 import { Navigation } from '../components/Navigation/Navigation';
 
@@ -30,11 +31,11 @@ export default function RootLayout({
       <body className={rubik.className}>
         <BlocksProvider theme={momotaro}>
           <ToastProvider>
-            {/* TODO add spriteUrl="/icons.svg" and linkComponent={Link} */}
             <Header />
             <Navigation>{children}</Navigation>
           </ToastProvider>
         </BlocksProvider>
+        <CenterInput />
       </body>
     </html>
   );
