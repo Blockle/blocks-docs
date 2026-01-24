@@ -1,6 +1,7 @@
 import { Box, Heading, Stack, Text, Tooltip } from '@blockle/blocks';
 import type { NextPage } from 'next';
 
+import { BlocksVersion } from '../components/BlocksVersion/BlocksVersion';
 import { Link } from '../components/Link/Link';
 
 const HomePage: NextPage = () => {
@@ -30,6 +31,8 @@ const HomePage: NextPage = () => {
           </Tooltip>
         </Stack>
       </Stack>
+
+      <BlocksVersion />
     </Box>
   );
 };
