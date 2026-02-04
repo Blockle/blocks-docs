@@ -17,8 +17,8 @@
     "ts": "tsc --noemit --project ./tsconfig.json"
   },
   "dependencies": {
-    "@blockle/blocks": "^2.3.12",
-    "@blockle/blocks-theme-momotaro": "^6.2.5",
+    "@blockle/blocks": "^2.3.17",
+    "@blockle/blocks-theme-momotaro": "^6.2.6",
     "@md-parser/parser": "^0.11.1",
     "@md-parser/react": "^1.0.5",
     "@next/bundle-analyzer": "^16.1.6",
@@ -28,9 +28,9 @@
     "react-syntax-highlighter": "^16.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.13",
+    "@biomejs/biome": "^2.3.14",
     "@types/node": "^25.2.0",
-    "@types/react": "^19.2.10",
+    "@types/react": "^19.2.11",
     "@types/react-dom": "^19.2.3",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@vanilla-extract/css": "^1.18.0",
