@@ -3,6 +3,7 @@
 import { Box, Button } from '@blockle/blocks';
 import { type FC, useState } from 'react';
 
+import { HeroIcon } from '../HeroIcon/HeroIcon';
 import { Search } from '../Search/Search';
 import { SideNav } from '../SideNav/SideNav';
 
@@ -21,12 +22,13 @@ export const Navigation: FC<NavigationProps> = ({ children }) => {
         backgroundColor="primary-200"
         padding={2}
       >
-        <Box asChild display={['block', 'none']}>
+        <Box asChild display={['block', 'block', 'none']}>
           <Button
             size="small"
             onClick={() => setIsSideNavOpen((isOpen) => !isOpen)}
+            aria-label="Toggle navigation"
           >
-            Navigation
+            <HeroIcon name="bars-3" />
           </Button>
         </Box>
 

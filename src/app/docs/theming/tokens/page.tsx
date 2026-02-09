@@ -11,7 +11,9 @@ const Page: NextPage = async () => {
   return (
     <Stack gap={5}>
       <Stack gap={2}>
-        <Heading level={1}>Tokens</Heading>
+        <Heading level={1} fontSize="large" fontWeight="medium">
+          Tokens
+        </Heading>
 
         <Text tag="p">
           Tokens are the building blocks of Blockle design system. They are used
